@@ -16,7 +16,7 @@ export default function Home({ posts }: any): JSX.Element {
           <link rel="icon" href="/du-icons/favicon.png" />
         </Head>
 
-        <main className="flex justify-center px-30 w-full">
+        <main className="flex justify-center px-30 w-full h-screen">
           <Container>
             {posts.map((post: any, index: number) => {
               return (
