@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
 import Container from "../src/components/container";
+import PostList from "../src/components/post-list/post-list";
 import { getAllFilesMetadata } from "../src/services/mdx";
 
 export default function Home({ posts }: any): JSX.Element {
@@ -15,19 +15,9 @@ export default function Home({ posts }: any): JSX.Element {
           />
           <link rel="icon" href="/du-icons/favicon.png" />
         </Head>
-
         <main className="flex justify-center px-30 w-full h-screen">
           <Container>
-            {posts.map((post: any, index: number) => {
-              return (
-                <Link key={index} href={`/post/${post.slug}`} passHref>
-                  <div className="cursor-pointer">
-                    <h2>{post.title}</h2>
-                    <p>{post.date}</p>
-                  </div>
-                </Link>
-              );
-            })}
+            <PostList posts={posts} />
           </Container>
         </main>
       </div>

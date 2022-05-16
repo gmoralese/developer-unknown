@@ -1,14 +1,13 @@
 import { MDXRemote } from "next-mdx-remote";
-import Navbar from "../../src/components/navbar/navbar";
+import Container from "../../src/components/container";
 import { getFileBySlug, getFiles } from "../../src/services/mdx";
 
 export default function Post({ source, frontMatter }: any): JSX.Element {
-  const components = { Navbar };
   return (
-    <div>
-      <MDXRemote {...source} components={components}>
-        <div>asdads</div>
-      </MDXRemote>
+    <div className="h-screen">
+      <Container>
+        <MDXRemote {...source} />
+      </Container>
     </div>
   );
 }
