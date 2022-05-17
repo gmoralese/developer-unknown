@@ -1,7 +1,8 @@
+import { PostType } from "src/types/posts.type";
 import PostBoxContainer from "./post-box-container";
 
 type PostListProps = {
-  posts: any;
+  posts: PostType[];
 };
 
 export default function PostList({ posts }: PostListProps) {

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Container from "../container";
-import { links } from "./navbar-links";
 
 export default function Navbar() {
   const router = useRouter();
@@ -20,7 +19,7 @@ export default function Navbar() {
               onClick={() => router.push("/")}
             />
           </div>
-          <ul className="flex justify-center items-center">
+          {/*           <ul className="flex justify-center items-center">
             {links.map((link, index) => {
               return (
                 <li className="px-8" key={index}>
@@ -33,7 +32,7 @@ export default function Navbar() {
                 </li>
               );
             })}
-          </ul>
+          </ul> */}
         </div>
       </Container>
     </nav>
