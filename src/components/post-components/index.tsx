@@ -16,4 +16,5 @@ export const components = {
     <code className="language-javascript">{props.children}</code>
   ),
   br: () => <br />,
+  a: (props: any) => <a>{props.children}</a>,
 };
